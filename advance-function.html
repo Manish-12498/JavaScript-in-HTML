@@ -8,6 +8,30 @@
 <body>
     <script>
         
+
+        const function1=  function greeting(){
+            console.log("Hello");
+
+        }
+        console.log(function1); 
+        function1();
+
+        const object1={
+            num:2,
+            fun: function (){// anonumus function 
+                console.log("Hello 2");
+            },
+        };
+        object1.fun();
+
+        function run(prarameter){
+            prarameter();
+
+        }
+
+        run( function (){///call back function
+            console.log('Call back function');
+        });
     </script>
 </body>
 </html>
