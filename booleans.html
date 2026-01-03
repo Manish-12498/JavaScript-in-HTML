@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booleans</title>
+</head>
+<body>
+
+    <script>
+        console.log(typeof true)
+        console.log(3<5);
+        console.log(5=='5');// is convert both value to same type ... 
+        console.log(5==='5'); // === use to avoide conversion behaviour like above
+        if (false) {
+            console.log("Hello"); 
+        }
+        else{
+            console.log("Bonjor");
+        }
+
+        if(0){
+            console.log('truely');
+        }
+        else{
+            console.log('Falsy Value');// False values are :- {'0','false','Nan','undefined','null'}
+        }
+        console.log('text'/10);
+        let variable1;
+        console.log(variable1);
+
+       const result =true ? 'truthy' : 'falsy';
+       console.log(result);
+
+       false && console.log('hello');// Guard opertator .... short circuit the code in first line if && get first value false 
+
+
+    </script>
+    
+</body>
+</html>

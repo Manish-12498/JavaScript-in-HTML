@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>To Do List</title>  
+    <link rel="stylesheet" href="style/to-do-basic.css">
+</head>
+<body>
+
+    <div class="app">
+        <h2>📝 To-Do List</h2>
+
+        <div class="input-group">
+            <input type="text" placeholder="To-Do Name" class="js-todo-input name-input">
+            <input type="date" class="js-todo-date due-date-input">
+            <input type="time" class="js-todo-time due-time-input">
+            <button onclick="clickAdd()" class="add-todo-button">Add</button>
+        </div>
+
+        <div class="js-todo-list todo-grid"></div>
+    </div>
+    
+    <script src="script/todo-basic.js"></script>
+</body>
+</html>

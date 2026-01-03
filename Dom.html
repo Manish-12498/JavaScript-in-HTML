@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <button>Hello</button>
+    <button class="js-button">Second Button</button>
+
+    <script>
+        /*
+        document.body.innerHTML='Hello';
+        document.title='Document Object Modle';
+        
+       console.log(document.body);
+       */
+        console.log( document.querySelector('button'));
+        console.log( document.querySelector('button').innerHTML);
+        console.log( document.querySelector('button').innerHTML='Change');
+
+        console.log( document.querySelector('.js-button'));
+
+
+
+    </script>
+    
+</body>
+</html>

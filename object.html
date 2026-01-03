@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object in .JS</title>
+</head>
+<body>
+    <script>
+        const product={
+            name:'Laptop',
+            price : 40000,
+            rating:{
+                stars:4.5,
+                count:91,  
+                fun1: function function1(){
+                    console.log('Hello From inside class class function');
+                }  
+            },
+
+        };
+        // console.log(product);
+        // product.Book='Read';
+        // console.log(product);
+        // console.log(product.name);
+        // delete product.Book;
+        // console.log(product);
+        // console.log(product['name']);
+        // console.log(product["devivery-time"]);
+        // console.log(product.rating.stars)
+        // console.log(product.rating.fun1());
+        // console.log( JSON.stringify(product)); // convet the object into JSON String used to save in computer memory
+        // console.log(JSON.parse(JSON.stringify(product)));// convert the JSON sting to javascript object
+        
+        const{fun1,price}=product;
+        console.log();
+        console.log(price);
+
+    </script>
+</body>
+</html>

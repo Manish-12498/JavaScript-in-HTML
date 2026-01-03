@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array and Loop</title>
+</head>
+<body>
+    <script>
+       /*const myArray=[10,20,30];
+        console.log(myArray[0]);
+        myArray[0]=100;
+        console.log(myArray);
+
+        const secondArray= [1, 'hello', true ,{ 'name' : 'Manish' , 'course' : 'CSE'}]
+        secondArray.push('Fool');
+        console.log(secondArray);
+        console.log( secondArray.length);
+        console.log(secondArray[3].name);*/
+
+        const todo=[1,2,3];
+        const todoDubble=[];
+        for(let i=0;i<todo.length;i++){
+            todoDubble.push(todo[i]*2);
+        }
+        array2= todoDubble.slice();// slice make the copy of the the array ... arrays are refrences which are point to the location just like pointers in c++
+
+        console.log(todoDubble);
+        todoDubble.splice(0,1);// splice is use to delete the data inside the array and it take two argument .. 1 is the index and, 2 is the from that index how many data to delete from that index to i++ 
+        console.log(todoDubble);
+        console.log(array2);
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

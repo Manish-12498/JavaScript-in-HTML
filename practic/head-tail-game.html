@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Head Tail Game</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            margin: 0;
+        }
+
+        .game-container {
+            background: rgba(0, 0, 0, 0.25);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            width: 300px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.3s;
+        }
+
+        .heads {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .tails {
+            background: #f44336;
+            color: white;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        .result {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .score {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="game-container">
+        <h1>Head or Tail</h1>
+
+        <button class="heads" onclick="gamePlay('heads')">Heads</button>
+        <button class="tails" onclick="gamePlay('tails')">Tails</button>
+
+        <div class="result" id="result">Make your choice!</div>
+        <div class="score" id="score">Wins: 0 | Losses: 0</div>
+    </div>
+
+    <script>
+        const score = {
+            wins: 0,
+            losses: 0
+        };
+
+        function randomNumberGeneration() {
+            return Math.random() < 0.5 ? 'heads' : 'tails';
+        }
+
+        function gamePlay(playerMove) {
+            const computerMove = randomNumberGeneration();
+            const resultDiv = document.getElementById("result");
+            const scoreDiv = document.getElementById("score");
+
+            if (playerMove === computerMove) {
+                score.wins++;
+                resultDiv.textContent =
+                    `You WON 🎉 | You: ${playerMove} | Computer: ${computerMove}`;
+            } else {
+                score.losses++;
+                resultDiv.textContent =
+                    `You LOST 😢 | You: ${playerMove} | Computer: ${computerMove}`;
+            }
+
+            scoreDiv.textContent =
+                `Wins: ${score.wins} | Losses: ${score.losses}`;
+        }
+    </script>
+
+</body>
+</html>
